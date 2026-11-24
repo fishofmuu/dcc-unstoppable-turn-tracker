@@ -57,6 +57,7 @@ export function SetupScreen({ onStart }: SetupScreenProps) {
         >
           Start Crawl
         </button>
+        <p className="setup-note">Finish game setup before starting your crawl</p>
       </main>
 
       <footer className="setup-footer">

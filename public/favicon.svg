@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#111b2b"/>
+      <stop offset="1" stop-color="#05070b"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffe28a"/>
+      <stop offset="1" stop-color="#d99b1f"/>
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" rx="112" fill="url(#bg)"/>
+  <rect x="26" y="26" width="460" height="460" rx="92" fill="none" stroke="url(#gold)" stroke-width="8" opacity=".72"/>
+  <path d="M256 84c-74 0-126 51-126 120 0 43 21 76 56 96v42c0 15 12 27 27 27h86c15 0 27-12 27-27v-42c35-20 56-53 56-96 0-69-52-120-126-120z" fill="url(#gold)"/>
+  <ellipse cx="205" cy="215" rx="27" ry="32" fill="#05070b"/>
+  <ellipse cx="307" cy="215" rx="27" ry="32" fill="#05070b"/>
+  <path d="M236 266l20 28 20-28" fill="none" stroke="#05070b" stroke-width="13" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M226 328h60M220 354h72" stroke="#05070b" stroke-width="11" stroke-linecap="round"/>
+</svg>

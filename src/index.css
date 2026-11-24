@@ -704,19 +704,42 @@ p {
 }
 
 .player-card {
+  position: relative;
   display: flex;
   flex-direction: column;
   gap: 8px;
   align-items: center;
   justify-content: center;
-  min-height: 190px;
+  min-height: 250px;
   padding: 18px;
+  overflow: hidden;
   color: var(--text);
   background: linear-gradient(160deg, rgba(19, 27, 39, 0.9), rgba(8, 12, 18, 0.96));
   border: 1px solid var(--line);
   border-radius: 20px;
   cursor: pointer;
   transition: transform 180ms ease, border-color 180ms ease, box-shadow 180ms ease;
+}
+
+.player-card::before {
+  position: absolute;
+  top: -22%;
+  left: 50%;
+  width: 260px;
+  height: 260px;
+  pointer-events: none;
+  content: '';
+  background: radial-gradient(circle, rgba(45, 91, 255, 0.18), transparent 68%);
+  transform: translateX(-50%);
+}
+
+.player-card.selected::before {
+  background: radial-gradient(circle, rgba(245, 197, 66, 0.2), transparent 68%);
+}
+
+.player-card > * {
+  position: relative;
+  z-index: 1;
 }
 
 .player-card:hover {
@@ -733,10 +756,17 @@ p {
 }
 
 .player-icon {
-  width: 72px;
-  height: 72px;
+  width: auto;
+  height: 150px;
+  max-width: 100%;
   object-fit: contain;
-  filter: drop-shadow(0 0 12px rgba(255, 255, 255, 0.14));
+  filter: drop-shadow(0 0 18px rgba(45, 91, 255, 0.28));
+  transition: filter 180ms ease, transform 180ms ease;
+}
+
+.player-card.selected .player-icon {
+  filter: drop-shadow(0 0 18px rgba(245, 197, 66, 0.28));
+  transform: translateY(-2px);
 }
 
 .player-name {
@@ -1322,8 +1352,9 @@ p {
 
   .player-icon {
     flex: none;
-    width: 54px;
-    height: 54px;
+    width: auto;
+    height: 96px;
+    max-width: 58px;
   }
 
   .player-desc {

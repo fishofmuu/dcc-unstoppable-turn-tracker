@@ -19,6 +19,7 @@ Examples: mana.svg, action.png, health.svg. A custom file replaces the
 built-in icon; if there is no custom or built-in icon, the token text is shown.
 
 Custom tokens used in this file: :attack: :defense: :eliminate:
+:refresh: :training: :gameover: :exhaust: :gold: :damage:
 Mapped icons live in src/assets/game-icons/; replace them there.
 -->
 
@@ -26,23 +27,23 @@ Mapped icons live in src/assets/game-icons/; replace them there.
 
 <!-- id: solo/upkeep-resources -->
 ## Gain your Upkeep resources
-- Gain 1 **mana** (:mana:)
-- Gain 3 **action points** (:action:)
-- Refresh **allies**
+- Gain 1 :mana:.
+- Gain 3 :action:.
+- :refresh: allies.
 - Resolve all "upkeep" effects *(if any)*
 
 <!-- id: solo/draft-draw -->
 ## Draft a new card
-- Find the **core deck** *under your small level disc*.
+- Find the **core deck** under your :training:.
 - Draw the top 3 cards, keep 1, and return the other 2 to the bottom of that deck in any order.
-- Reset the small level disc to the top of your large level disc *if needed*
+- Reset :training: (if needed).
 
 <!-- id: solo/draft-sleeve -->
 ## Sleeve your pick
 - Insert your selected card into the top **threat card**. *Do not look at the threat side of the cards.*
-- Add the newly drafted card *to your hand*
+- Add the newly drafted card *to your hand*.
 
-> If you run out of threat cards, **GAME OVER**
+> If you run out of threat cards, :gameover:
 
 <!-- id: solo/main -->
 ## Main Phase
@@ -50,8 +51,8 @@ Take any number of actions in any order. Resolve each action completely before s
 
 - Play cards by spending :action:.
 - Cast spells by spending :mana:.
-- Exhaust allies to use their abilities.
-- Buy upgrades with gold.
+- :exhaust: allies to use their abilities.
+- Buy upgrades with :gold:.
 - Attack active, looming, or on-deck threats.
 
 Threat HP = **Attack** :attack: + **Defense** :defense:
@@ -90,10 +91,10 @@ Move the danger marker 1 space on the floor mat, skipping spaces based on your d
 
 <!-- id: coop/draft-reveal -->
 ## Co-op Draft: draw and pick
-- Both players find the core deck *under their small level disc*.
-- Both players draw the top 2 cards
+- Both players find the core deck under their :training:
+- Both players draw the top 2 cards.
 - Either player drafts from either pair of cards, but *both players cannot choose from the same pair*
-- Reset each small level disc to its large level disc.
+- Reset each :training: (if needed).
 
 > If an effect increases how many cards a player reveals or keeps, it applies only to that player.
 

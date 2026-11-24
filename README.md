@@ -74,7 +74,7 @@ All rule text lives in **`src/content/rules.md`**. It is the only source the app
 - Built-in icon tokens: `:mana:`, `:action:`, `:card:`, `:sword:`, `:threat:`, `:broom:`, `:levelup:`, `:danger:`.
 - Put custom icons in `src/assets/game-icons/` using the token as the filename. A custom `mana.svg`, `mana.png`, or `mana.webp` replaces the built-in `:mana:` icon.
 - The full icon source drop is in `icons/`; mapped, token-named copies live in `src/assets/game-icons/`.
-- Current mapped tokens include `:mana:`, `:action:`, `:attack:`, `:defense:`, `:eliminate:`, `:health:`, `:gold:`, `:damage:`, `:fast:`, `:taunt:`, and the stat symbols.
+- Current mapped tokens include `:mana:`, `:action:`, `:attack:`, `:defense:`, `:eliminate:`, `:refresh:`, `:training:`, `:gameover:`, `:exhaust:`, `:gold:`, `:damage:`, `:health:`, `:fast:`, `:taunt:`, and the stat symbols.
 - Missing sections show a clear placeholder and fail the content test.
 
 ## Assets

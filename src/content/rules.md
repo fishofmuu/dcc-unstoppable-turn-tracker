@@ -19,7 +19,7 @@ Examples: mana.svg, action.png, health.svg. A custom file replaces the
 built-in icon; if there is no custom or built-in icon, the token text is shown.
 
 Custom tokens used in this file: :attack: :defense: :eliminate:
-Add attack.svg, defense.svg, and eliminate.svg to src/assets/game-icons/.
+Mapped icons live in src/assets/game-icons/; replace them there.
 -->
 
 <!-- group: Solo steps -->

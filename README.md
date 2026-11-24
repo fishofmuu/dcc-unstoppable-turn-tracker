@@ -73,7 +73,8 @@ All rule text lives in **`src/content/rules.md`**. It is the only source the app
 - Markdown supports paragraphs, bullet/numbered lists, blockquotes, bold, italic, links, and inline icon tokens.
 - Built-in icon tokens: `:mana:`, `:action:`, `:card:`, `:sword:`, `:threat:`, `:broom:`, `:levelup:`, `:danger:`.
 - Put custom icons in `src/assets/game-icons/` using the token as the filename. A custom `mana.svg`, `mana.png`, or `mana.webp` replaces the built-in `:mana:` icon.
-- The current copy uses `:attack:`, `:defense:`, and `:eliminate:`; add `attack.svg`, `defense.svg`, and `eliminate.svg` to the custom icon folder.
+- The full icon source drop is in `icons/`; mapped, token-named copies live in `src/assets/game-icons/`.
+- Current mapped tokens include `:mana:`, `:action:`, `:attack:`, `:defense:`, `:eliminate:`, `:health:`, `:gold:`, `:damage:`, `:fast:`, `:taunt:`, and the stat symbols.
 - Missing sections show a clear placeholder and fail the content test.
 
 ## Assets

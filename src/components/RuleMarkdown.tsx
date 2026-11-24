@@ -64,7 +64,7 @@ export function RuleIcon({ name }: { name: string }) {
         src={custom}
         alt=""
         title={normalized}
-        className="rule-icon"
+        className="rule-icon rule-icon-custom"
       />
     )
   }

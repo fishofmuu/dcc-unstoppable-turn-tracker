@@ -431,6 +431,11 @@ p {
   margin-bottom: 0;
 }
 
+.rule-markdown ul + p,
+.rule-markdown ol + p {
+  margin-top: 14px;
+}
+
 .rule-markdown.levelup-step-copy p {
   margin: 0 0 12px;
   color: #cfd6e0;
@@ -467,6 +472,12 @@ p {
   object-fit: contain;
 }
 
+.rule-icon-custom {
+  width: auto;
+  height: 1.25em;
+  max-width: 6em;
+}
+
 .step-card h1 .rule-icon,
 .levelup-step h3 .rule-icon,
 .reference-list h3 .rule-icon {
@@ -474,6 +485,14 @@ p {
   height: 0.72em;
   margin: 0 0.08em;
   vertical-align: -0.03em;
+}
+
+.step-card h1 .rule-icon-custom,
+.levelup-step h3 .rule-icon-custom,
+.reference-list h3 .rule-icon-custom {
+  width: auto;
+  height: 0.95em;
+  max-width: 5em;
 }
 
 .rule-icon-missing {

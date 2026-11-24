@@ -5,7 +5,7 @@ import { getTurnSteps } from './turnSteps'
 describe('turn steps', () => {
   it('has the expected solo loop', () => {
     const steps = getTurnSteps(1)
-    expect(steps).toHaveLength(9)
+    expect(steps).toHaveLength(8)
     expect(steps[0].phase).toBe('upkeep')
     expect(steps[steps.length - 1].phase).toBe('cleanup')
     expect(new Set(steps.map((step) => step.id)).size).toBe(steps.length)
@@ -16,9 +16,21 @@ describe('turn steps', () => {
 
   it('has the expected two-player loop', () => {
     const steps = getTurnSteps(2)
-    expect(steps).toHaveLength(10)
-    expect(steps.filter((step) => step.phase === 'draft')).toHaveLength(3)
+    expect(steps).toHaveLength(8)
+    expect(steps.filter((step) => step.phase === 'draft')).toHaveLength(2)
     expect(steps[steps.length - 1].dangerCheck).toBe(true)
+    expect(new Set(steps.map((step) => step.id)).size).toBe(steps.length)
+  })
+
+  it('shares solo copy for co-op non-draft steps', () => {
+    const soloIds = new Set(getTurnSteps(1).map((step) => step.id))
+    const coOp = getTurnSteps(2)
+    const nonDraft = coOp.filter((step) => step.phase !== 'draft')
+
+    expect(nonDraft.every((step) => soloIds.has(step.id))).toBe(true)
+    expect(
+      coOp.filter((step) => step.phase === 'draft').map((step) => step.id),
+    ).toEqual(['coop/draft-reveal', 'solo/draft-sleeve'])
   })
 
   it('keeps the five phases in order', () => {

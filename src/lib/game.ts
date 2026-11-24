@@ -1,7 +1,7 @@
 import { getTurnSteps } from '../data/turnSteps'
 import type { DangerAnswer, GameState, PlayerCount } from '../types'
 
-export const STORAGE_KEY = 'dcc-unstoppable-turn-tracker:v1'
+export const STORAGE_KEY = 'dcc-unstoppable-turn-tracker:v2'
 export const MAX_DANGER = 5
 
 export function clampDanger(level: number): number {

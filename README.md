@@ -69,9 +69,11 @@ All rule text lives in **`src/content/rules.md`**. It is the only source the app
 
 - Each section starts with an ID comment such as `<!-- id: solo/upkeep-resources -->` and a `##` heading.
 - Keep the ID comment; the step order and flags are still defined in code.
+- Co-op reuses the solo sections for Upkeep, Main, Threat, and Cleanup. Only `coop/draft-reveal` is co-op-specific; the sleeve/add step is shared.
 - Markdown supports paragraphs, bullet/numbered lists, blockquotes, bold, italic, links, and inline icon tokens.
 - Built-in icon tokens: `:mana:`, `:action:`, `:card:`, `:sword:`, `:threat:`, `:broom:`, `:levelup:`, `:danger:`.
 - Put custom icons in `src/assets/game-icons/` using the token as the filename. A custom `mana.svg`, `mana.png`, or `mana.webp` replaces the built-in `:mana:` icon.
+- The current copy uses `:attack:`, `:defense:`, and `:eliminate:`; add `attack.svg`, `defense.svg`, and `eliminate.svg` to the custom icon folder.
 - Missing sections show a clear placeholder and fail the content test.
 
 ## Assets

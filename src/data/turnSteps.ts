@@ -6,10 +6,6 @@ const soloSteps: TurnStep[] = [
     phase: 'upkeep',
   },
   {
-    id: 'solo/upkeep-refresh',
-    phase: 'upkeep',
-  },
-  {
     id: 'solo/draft-draw',
     phase: 'draft',
   },
@@ -43,51 +39,26 @@ const soloSteps: TurnStep[] = [
   },
 ]
 
+function sharedStep(id: string): TurnStep {
+  const step = soloSteps.find((candidate) => candidate.id === id)
+  if (!step) {
+    throw new Error(`Missing shared step: ${id}`)
+  }
+  return step
+}
+
 const twoPlayerSteps: TurnStep[] = [
-  {
-    id: 'coop/upkeep-resources',
-    phase: 'upkeep',
-  },
-  {
-    id: 'coop/upkeep-refresh',
-    phase: 'upkeep',
-  },
+  sharedStep('solo/upkeep-resources'),
   {
     id: 'coop/draft-reveal',
     phase: 'draft',
   },
-  {
-    id: 'coop/draft-pick',
-    phase: 'draft',
-  },
-  {
-    id: 'coop/draft-sleeve',
-    phase: 'draft',
-  },
-  {
-    id: 'coop/main',
-    phase: 'main',
-    levelUp: true,
-  },
-  {
-    id: 'coop/threat',
-    phase: 'threat',
-  },
-  {
-    id: 'coop/cleanup-discard',
-    phase: 'cleanup',
-  },
-  {
-    id: 'coop/cleanup-refill',
-    phase: 'cleanup',
-    levelUp: true,
-  },
-  {
-    id: 'coop/cleanup-danger',
-    phase: 'cleanup',
-    dangerCheck: true,
-    nextLabel: 'End Turn',
-  },
+  sharedStep('solo/draft-sleeve'),
+  sharedStep('solo/main'),
+  sharedStep('solo/threat'),
+  sharedStep('solo/cleanup-discard'),
+  sharedStep('solo/cleanup-refill'),
+  sharedStep('solo/cleanup-danger'),
 ]
 
 export function getTurnSteps(playerCount: PlayerCount): TurnStep[] {

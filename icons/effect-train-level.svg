@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" version="1.1" width="28.37" height="28.35" viewBox="0 0 28.373002 28.346009">
+<defs>
+<clipPath id="clip_1">
+<path transform="matrix(1,0,0,-1,-40.5223,90.63629)" d="M40.5223 62.290285H68.8953V90.63629H40.5223Z" clip-rule="evenodd"/>
+</clipPath>
+<clipPath id="clip_2">
+<path transform="matrix(1,0,0,-1,-40.5223,90.63629)" d="M0 0H453.543V595.276H0Z"/>
+</clipPath>
+<clipPath id="clip_3">
+<path transform="matrix(1,0,0,-1,-40.5223,90.63629)" d="M-467.76-14.122H467.75898V609.398H-467.76Z"/>
+</clipPath>
+<mask id="mask_4">
+<g transform="matrix(935.51998,0,0,623.51998,-508.28233,-518.7615)">
+<image id="image_5" width="1" height="1" xlink:href="data:image/png;base64,
+iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAAAAAA6fptVAAAACXBIWXMAAA7EAAAO
+xAGVKw4bAAAACklEQVR4nGNgAAAAAgABSK+kcQAAAABJRU5ErkJggg=="/>
+</g>
+</mask>
+<clipPath id="clip_7">
+<path transform="matrix(1,0,0,-1,-40.5223,90.63629)" d="M0 0H453.543V595.276H0Z"/>
+</clipPath>
+<clipPath id="clip_8">
+<path transform="matrix(1,0,0,-1,-40.5223,90.63629)" d="M28.2715 526.417H405.504V555.979H28.2715Z"/>
+</clipPath>
+<clipPath id="clip_9">
+<path transform="matrix(1,0,0,-1,-40.5223,90.63629)" d="M39.073 395.114H70.345V423.46003H39.073Z"/>
+</clipPath>
+<clipPath id="clip_10">
+<path transform="matrix(1,0,0,-1,-40.5223,90.63629)" d="M220.535 402.149H260.22V416.427H220.535Z"/>
+</clipPath>
+<clipPath id="clip_11">
+<path transform="matrix(1,0,0,-1,-40.5223,90.63629)" d="M226.205 313.15H254.551V341.496H226.205Z"/>
+</clipPath>
+<clipPath id="clip_12">
+<path transform="matrix(1,0,0,-1,-40.5223,90.63629)" d="M226.33 242.185H254.425V270.531H226.33Z"/>
+</clipPath>
+<clipPath id="clip_13">
+<path transform="matrix(1,0,0,-1,-40.5223,90.63629)" d="M228.929 182.219H251.826V210.565H228.929Z"/>
+</clipPath>
+<clipPath id="clip_14">
+<path transform="matrix(1,0,0,-1,-40.5223,90.63629)" d="M39.539 122.255H69.879V150.601H39.539Z"/>
+</clipPath>
+<clipPath id="clip_15">
+<path transform="matrix(1,0,0,-1,-40.5223,90.63629)" d="M227.517 122.255H253.238V150.601H227.517Z"/>
+</clipPath>
+<clipPath id="clip_16">
+<path transform="matrix(1,0,0,-1,-40.5223,90.63629)" d="M40.523 62.29H68.895V90.636H40.523Z"/>
+</clipPath>
+</defs>
+<g>
+<g clip-path="url(#clip_1)">
+<g clip-path="url(#clip_2)">
+<g clip-path="url(#clip_3)">
+<g mask="url(#mask_4)">
+<g transform="matrix(935.51998,0,0,623.51998,-508.28233,-518.7615)">
+<image id="image_6" width="1" height="1" xlink:href="data:image/png;base64,
+iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAACXBIWXMAAA7EAAAO
+xAGVKw4bAAAADElEQVR4nGNgYGAAAAAEAAH2FzhVAAAAAElFTkSuQmCC"/>
+</g>
+</g>
+</g>
+</g>
+<g clip-path="url(#clip_7)">
+<g style="mix-blend-mode:multiply">
+<g clip-path="url(#clip_8)">
+</g>
+</g>
+</g>
+<path transform="matrix(1,0,0,-1,36.863504,44.15589)" stroke-width="1" stroke-linecap="butt" stroke-miterlimit="10" stroke-linejoin="miter" fill="none" stroke="#a72123" d="M0 0V59.465"/>
+<path transform="matrix(1,0,0,-1,177.1785,44.15589)" stroke-width="1" stroke-linecap="butt" stroke-miterlimit="10" stroke-linejoin="miter" fill="none" stroke="#a72123" d="M0 0V59.465"/>
+<g clip-path="url(#clip_9)">
+</g>
+<g clip-path="url(#clip_10)">
+</g>
+<g clip-path="url(#clip_11)">
+</g>
+<g clip-path="url(#clip_12)">
+</g>
+<g clip-path="url(#clip_13)">
+</g>
+<g clip-path="url(#clip_14)">
+</g>
+<g clip-path="url(#clip_15)">
+</g>
+<path transform="matrix(1,0,0,-1,14.186001,-.0000076293949)" d="M0 0-4.009-4.063-.018-8.054-8.064-8.065-14.186-14.187-8.017-20.355-.044-20.344-4.009-24.311 .026-28.346 7.11-21.263 14.187-14.187 .026-.026Z" fill="#c42129"/>
+<g clip-path="url(#clip_16)">
+<path transform="matrix(1,0,0,-1,20.989499,13.105392)" d="M0 0C0 1.446-3.011 2.617-6.724 2.617-10.438 2.617-13.449 1.446-13.449 0V-2.14C-13.449-3.585-10.438-4.757-6.724-4.757-3.011-4.757 0-3.585 0-2.14Z" fill="#bcbcbc"/>
+<path transform="matrix(1,0,0,-1,20.989499,13.10199)" d="M0 0C0-1.444-3.011-2.614-6.724-2.614-10.438-2.614-13.449-1.444-13.449 0-13.449 1.444-10.438 2.614-6.724 2.614-3.011 2.614 0 1.444 0 0" fill="#ffffff"/>
+</g>
+</g>
+</g>
+</svg>

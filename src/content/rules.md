@@ -30,7 +30,7 @@ Mapped icons live in src/assets/game-icons/; replace them there.
 - Gain 1 :mana:.
 - Gain 3 :action:.
 - :refresh: allies.
-- Resolve all "upkeep" effects *(if any)*
+- Resolve all "upkeep" effects *(if any)*.
 
 <!-- id: solo/draft-draw -->
 ## Draft a new card
@@ -43,7 +43,7 @@ Mapped icons live in src/assets/game-icons/; replace them there.
 - Insert your selected card into the top **threat card**. *Do not look at the threat side of the cards.*
 - Add the newly drafted card *to your hand*.
 
-> If you run out of threat cards, :gameover:
+> If you run out of threat cards, :gameover:.
 
 <!-- id: solo/main -->
 ## Main Phase
@@ -55,45 +55,42 @@ Take any number of actions in any order. Resolve each action completely before s
 - Buy upgrades with :gold:.
 - Attack active, looming, or on-deck threats.
 
-Threat HP = **Attack** :attack: + **Defense** :defense:
 
-> If your deck is empty and there are no active threats, level up *immediately*
+(Threat :health: = :damage: + :defense:)
+
+> If your deck is empty and there are no active threats, **level up** *immediately*.
 
 <!-- id: solo/threat -->
 ## Threat Phase
 Take damage from all active threats in your battlefield.
 
 - Damage on threats persists between turns.
-- If your health reaches 0, **GAME OVER**
+- If your health reaches 0, :gameover:.
 
 > Danger-dependent attacks use the current Danger Level.
 
 <!-- id: solo/cleanup-discard -->
 ## Cleanup - Discard
 - Discard all tactic cards from play.
-- Lose all unspent action points
+- Lose all unspent :action:.
 
 <!-- id: solo/cleanup-refill -->
 ## Cleanup - Refill the battlefield
 Add threats from the top of your deck until 3 non-Fast active threats are on the battlefield and 1 is visible on top of your deck.
 
-> If your deck empties before the battlefield is full, level up immediately, then continue refilling.
+> If your deck empties before the battlefield is full, **level up** *immediately*, then continue refilling.
 
 <!-- id: solo/cleanup-danger -->
 ## Cleanup - Advance
-Move the danger marker 1 space on the floor mat, skipping spaces based on your difficulty. Then answer the danger check below.
-
-- If the marker reaches the end of the danger track, you lose.
-
-> After the check, end the turn and begin the next Upkeep Phase.
+Move the danger marker 1 space on the floor mat, skipping spaces based on your difficulty.
 
 <!-- group: Co-op steps -->
 
 <!-- id: coop/draft-reveal -->
 ## Co-op Draft: draw and pick
-- Both players find the core deck under their :training:
+- Both players find the core deck under their :training:.
 - Both players draw the top 2 cards.
-- Either player drafts from either pair of cards, but *both players cannot choose from the same pair*
+- Either player drafts from either pair of cards, but *both players cannot choose from the same pair*.
 - Reset each :training: (if needed).
 
 > If an effect increases how many cards a player reveals or keeps, it applies only to that player.
@@ -102,7 +99,7 @@ Move the danger marker 1 space on the floor mat, skipping spaces based on your d
 
 <!-- id: levelup/1 -->
 ## Advance both level discs
-Advance both level discs by 1
+Advance both level discs by 1.
 
 <!-- id: levelup/2 -->
 ## Discard

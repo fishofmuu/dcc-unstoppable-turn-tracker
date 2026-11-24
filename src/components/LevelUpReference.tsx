@@ -1,5 +1,6 @@
-import { LEVEL_UP_STEPS } from '../data/levelUpSteps'
+import { getLevelUpSteps } from '../content/rules'
 import { Modal } from './Modal'
+import { RuleMarkdown, RuleTitle } from './RuleMarkdown'
 
 interface LevelUpReferenceProps {
   open: boolean
@@ -7,6 +8,8 @@ interface LevelUpReferenceProps {
 }
 
 export function LevelUpReference({ open, onClose }: LevelUpReferenceProps) {
+  const steps = getLevelUpSteps()
+
   return (
     <Modal
       open={open}
@@ -21,10 +24,12 @@ export function LevelUpReference({ open, onClose }: LevelUpReferenceProps) {
       }
     >
       <ol className="reference-list">
-        {LEVEL_UP_STEPS.map((step) => (
-          <li key={step.title}>
-            <h3>{step.title}</h3>
-            <p>{step.body}</p>
+        {steps.map((step) => (
+          <li key={step.id}>
+            <h3>
+              <RuleTitle text={step.title} />
+            </h3>
+            <RuleMarkdown markdown={step.markdown} className="reference-copy" />
           </li>
         ))}
       </ol>

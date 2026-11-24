@@ -4,13 +4,14 @@ export type Phase = 'upkeep' | 'draft' | 'main' | 'threat' | 'cleanup'
 
 export type DangerAnswer = 'yes' | 'no'
 
+export interface RuleSection {
+  title: string
+  markdown: string
+}
+
 export interface TurnStep {
   id: string
   phase: Phase
-  title: string
-  body: string
-  bullets?: string[]
-  note?: string
   levelUp?: boolean
   dangerCheck?: boolean
   nextLabel?: string

@@ -1,6 +1,7 @@
-import { LEVEL_UP_STEPS } from '../data/levelUpSteps'
+import { getLevelUpSteps } from '../content/rules'
 import { ChevronLeftIcon, ChevronRightIcon } from './Icons'
 import { Modal } from './Modal'
+import { RuleMarkdown, RuleTitle } from './RuleMarkdown'
 
 interface LevelUpOverlayProps {
   open: boolean
@@ -19,9 +20,10 @@ export function LevelUpOverlay({
   onStepIndexChange,
   onClose,
 }: LevelUpOverlayProps) {
-  const step = LEVEL_UP_STEPS[stepIndex]
+  const steps = getLevelUpSteps()
+  const step = steps[stepIndex] ?? steps[0]
   const isFirst = stepIndex === 0
-  const isLast = stepIndex === LEVEL_UP_STEPS.length - 1
+  const isLast = stepIndex === steps.length - 1
 
   const footer = (
     <>
@@ -65,8 +67,11 @@ export function LevelUpOverlay({
         <span className="summary-chip">Danger {dangerLevel}</span>
       </div>
 
-      <div className="progress-dots" aria-label={`Level-up step ${stepIndex + 1} of ${LEVEL_UP_STEPS.length}`}>
-        {LEVEL_UP_STEPS.map((_, index) => (
+      <div
+        className="progress-dots"
+        aria-label={`Level-up step ${stepIndex + 1} of ${steps.length}`}
+      >
+        {steps.map((_, index) => (
           <span
             key={index}
             className={`progress-dot${
@@ -78,16 +83,11 @@ export function LevelUpOverlay({
 
       <div className="levelup-step">
         <span className="step-number">{stepIndex + 1}</span>
-        <h3>{step.title}</h3>
-        <p>{step.body}</p>
-        {step.note ? <p className="levelup-step-note">{step.note}</p> : null}
+        <h3>
+          <RuleTitle text={step.title} />
+        </h3>
+        <RuleMarkdown markdown={step.markdown} className="levelup-step-copy" />
       </div>
-
-      {isLast ? (
-        <p className="overlay-note">
-          If both players leveled up, run this walkthrough again for the other player.
-        </p>
-      ) : null}
     </Modal>
   )
 }

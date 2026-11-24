@@ -48,7 +48,7 @@ http://localhost:4173/dcc-unstoppable-turn-tracker/
 The repository deploys through GitHub Actions to GitHub Pages. On every push to `main`, the workflow:
 
 1. Installs dependencies.
-2. Runs the state tests.
+2. Runs the tests.
 3. Builds the Vite app.
 4. Publishes `dist` to GitHub Pages.
 
@@ -63,24 +63,26 @@ The Pages source must be set to **GitHub Actions**. The deployed path is `/dcc-u
 
 After the first load, the service worker caches the app so it runs offline. All state stays on the device.
 
+## Rules content
+
+All rule text lives in **`src/content/rules.md`**. It is the only source the app reads rule copy from.
+
+- Each section starts with an ID comment such as `<!-- id: solo/upkeep-resources -->` and a `##` heading.
+- Keep the ID comment; the step order and flags are still defined in code.
+- Markdown supports paragraphs, bullet/numbered lists, blockquotes, bold, italic, links, and inline icon tokens.
+- Built-in icon tokens: `:mana:`, `:action:`, `:card:`, `:sword:`, `:threat:`, `:broom:`, `:levelup:`, `:danger:`.
+- Put custom icons in `src/assets/game-icons/` using the token as the filename. A custom `mana.svg`, `mana.png`, or `mana.webp` replaces the built-in `:mana:` icon.
+- Missing sections show a clear placeholder and fail the content test.
+
 ## Assets
 
 - Header logo: `src/assets/Logo.webp`
 - Player-count icons: `src/assets/icons/1p.svg` and `src/assets/icons/2p.svg`
-- Placeholder phase/action icons: `src/components/Icons.tsx`
+- Built-in rule icon fallbacks: `src/components/Icons.tsx`
+- Custom rule icons: `src/assets/game-icons/`
 - PWA and favicon placeholders: `public/favicon.svg`, `public/icons/`
 
-The placeholder icons are intentional and can be replaced without changing the app logic. Replace the PNGs with square icons at the same sizes, or update the source SVGs.
-
-## Rules references
-
-- Turn phase order and level-up timing follow the official *Dungeon Crawler Carl: Unstoppable* rulebook.
-- The five level-up steps are:
-  1. Advance both level discs by 1.
-  2. Discard down to 3 cards and all tactics; discard non-Tough and damaged Tough allies; deal 1 damage to undamaged Tough allies.
-  3. Optionally eliminate 1 non-boss card.
-  4. Resolve floor-specific effects.
-  5. Reshuffle the discard pile and place it threat side up as the new deck.
+The placeholder app icons are intentional and can be replaced without changing the app logic. Replace the PNGs with square icons at the same sizes, or update the source SVGs.
 
 ## Disclaimer
 

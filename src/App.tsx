@@ -14,6 +14,7 @@ import { Menu } from './components/Menu'
 import { PhaseRail } from './components/PhaseRail'
 import { SetupScreen } from './components/SetupScreen'
 import { StepCard } from './components/StepCard'
+import { getRuleCopy } from './content/rules'
 import { getTurnSteps } from './data/turnSteps'
 import {
   answerDanger,
@@ -71,6 +72,7 @@ export default function App() {
 
   const steps = getTurnSteps(game.playerCount)
   const step = steps[game.stepIndex]
+  const copy = getRuleCopy(step.id)
   const phaseSteps = steps.filter((candidate) => candidate.phase === step.phase)
   const phaseStepNumber =
     phaseSteps.findIndex((candidate) => candidate.id === step.id) + 1
@@ -158,6 +160,7 @@ export default function App() {
       <main className="app-main">
         <StepCard
           step={step}
+          copy={copy}
           stepNumber={game.stepIndex + 1}
           totalSteps={steps.length}
           phaseStepNumber={phaseStepNumber}

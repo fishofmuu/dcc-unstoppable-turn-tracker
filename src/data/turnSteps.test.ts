@@ -1,6 +1,5 @@
 import { describe, expect, it } from 'vitest'
 import { PHASES } from '../types'
-import { LEVEL_UP_STEPS } from './levelUpSteps'
 import { getTurnSteps } from './turnSteps'
 
 describe('turn steps', () => {
@@ -30,9 +29,5 @@ describe('turn steps', () => {
       )
       expect([...indices].sort((a, b) => a - b)).toEqual(indices)
     }
-  })
-
-  it('has five level-up steps', () => {
-    expect(LEVEL_UP_STEPS).toHaveLength(5)
   })
 })

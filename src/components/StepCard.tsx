@@ -1,8 +1,15 @@
-import { PHASES, type DangerAnswer, type TurnStep } from '../types'
+import {
+  PHASES,
+  type DangerAnswer,
+  type RuleSection,
+  type TurnStep,
+} from '../types'
 import { DangerCheck } from './DangerCheck'
+import { RuleMarkdown, RuleTitle } from './RuleMarkdown'
 
 interface StepCardProps {
   step: TurnStep
+  copy: RuleSection
   stepNumber: number
   totalSteps: number
   phaseStepNumber: number
@@ -16,6 +23,7 @@ interface StepCardProps {
 
 export function StepCard({
   step,
+  copy,
   stepNumber,
   totalSteps,
   phaseStepNumber,
@@ -41,18 +49,10 @@ export function StepCard({
       </div>
 
       <article className="step-card">
-        <h1>{step.title}</h1>
-        <p className="step-body">{step.body}</p>
-
-        {step.bullets ? (
-          <ul className="step-bullets">
-            {step.bullets.map((bullet) => (
-              <li key={bullet}>{bullet}</li>
-            ))}
-          </ul>
-        ) : null}
-
-        {step.note ? <p className="step-note">{step.note}</p> : null}
+        <h1>
+          <RuleTitle text={copy.title} />
+        </h1>
+        <RuleMarkdown markdown={copy.markdown} className="step-body" />
 
         {step.dangerCheck ? (
           <DangerCheck

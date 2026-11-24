@@ -20,9 +20,6 @@ export function SetupScreen({ onStart }: SetupScreenProps) {
           className="setup-logo"
         />
         <p className="setup-app-name">DCC Unstoppable Turn Tracker</p>
-        <p className="setup-tagline">
-          A turn-by-turn companion for your crawl through the World Dungeon.
-        </p>
       </header>
 
       <main className="setup-main">
@@ -40,7 +37,6 @@ export function SetupScreen({ onStart }: SetupScreenProps) {
           >
             <img src={icon1p} alt="" className="player-icon" />
             <span className="player-name">Solo</span>
-            <span className="player-desc">One crawler, one deck.</span>
           </button>
 
           <button
@@ -51,9 +47,6 @@ export function SetupScreen({ onStart }: SetupScreenProps) {
           >
             <img src={icon2p} alt="" className="player-icon" />
             <span className="player-name">Co-op</span>
-            <span className="player-desc">
-              Two crawlers, simultaneous turns.
-            </span>
           </button>
         </div>
 
@@ -64,17 +57,11 @@ export function SetupScreen({ onStart }: SetupScreenProps) {
         >
           Start Crawl
         </button>
-
-        <p className="setup-note">
-          Finish your table setup first. The tracker starts at Turn 1, Upkeep,
-          with the Danger Level at 0.
-        </p>
       </main>
 
       <footer className="setup-footer">
         Unofficial fan-made companion. Not affiliated with Renegade Game
-        Studios or Matt Dinniman. This is a turn guide, not a replacement for
-        the rulebook.
+        Studios or Matt Dinniman.
       </footer>
     </div>
   )

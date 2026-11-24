@@ -64,8 +64,8 @@ Take any number of actions in any order. Resolve each action completely before s
 ## Threat Phase
 Take damage from all active threats in your battlefield.
 
-- Damage on threats persists between turns.
-- If your health reaches 0, :gameover:.
+- :damage: on threats persists between turns.
+- If your :health: reaches 0, :gameover:.
 
 > Danger-dependent attacks use the current Danger Level.
 
@@ -105,12 +105,12 @@ Advance both level discs by 1.
 ## Discard
 - Discard down to 3 cards in hand.
 - Discard all tactics from play.
-- Discard all non-Tough allies and any Tough allies that already have damage.
-- Deal 1 damage to each undamaged Tough ally.
+- Discard all non-Tough allies and any Tough allies that have :damage:.
+- Place :damage: on each remaining Tough ally.
 
 <!-- id: levelup/3 -->
 ## Optionally eliminate 1 card
-You may :eliminate: any 1 non-boss card from your hand, discard pile, or play area.
+You may :eliminate: any 1 non-boss card from your hand or discard.
 
 <!-- id: levelup/4 -->
 ## Resolve floor-specific effects
